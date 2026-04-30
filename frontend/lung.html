@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer Prediction - IntelliCure AI</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="logo-icon">⚕</span>
+                <h2>N.B.K.R.IST</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item">
+                    <span>Home</span>
+                </a>
+                <a href="dashboard.html" class="nav-item">
+                    <span>Dashboard</span>
+                </a>
+                <div class="nav-section">
+                    <span class="nav-label">Diseases</span>
+                    <a href="liver.html" class="nav-item">
+                        <span>Liver Disease Prediction</span>
+                    </a>
+                    <a href="kidney.html" class="nav-item">
+                        <span>Kidney Disease Prediction</span>
+                    </a>
+                    <a href="lung.html" class="nav-item active">
+                        <span>Lung Cancer Prediction</span>
+                    </a>
+                    <a href="parkinsons.html" class="nav-item">
+                        <span>Parkinson's Prediction</span>
+                    </a>
+                </div>
+                <a href="history.html" class="nav-item">
+                    <span>History</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <p>© 2026 N.B.K.R.IST</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div class="header-left">
+                    <h1>Lung Cancer Prediction</h1>
+                </div>
+                <div class="header-right">
+                    <span class="user-info">Guest User</span>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <div class="content-main">
+                    <p class="page-description">Enter the required medical parameters to predict lung cancer risk.</p>
+
+                    <form class="prediction-form" id="lungForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="GENDER">Gender</label>
+                                <select id="GENDER" name="GENDER" required>
+                                    <option value="">Select gender</option>
+                                    <option value="1">Male</option>
+                                    <option value="0">Female</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="AGE">Age</label>
+                                <input type="number" id="AGE" name="AGE" placeholder="Enter age (e.g., 45)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="SMOKING">Smoking</label>
+                                <select id="SMOKING" name="SMOKING" required>
+                                    <option value="">Select option</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="FINGER_DISCOLORATION">Finger Discoloration</label>
+                                <select id="FINGER_DISCOLORATION" name="FINGER_DISCOLORATION" required>
+                                    <option value="">Select option</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="MENTAL_STRESS">Mental Stress / Anxiety</label>
+                                <select id="MENTAL_STRESS" name="MENTAL_STRESS" required>
+                                    <option value="">Select option</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="EXPOSURE_TO_POLLUTION">Exposure to Pollution</label>
+                                <select id="EXPOSURE_TO_POLLUTION" name="EXPOSURE_TO_POLLUTION" required>
+                                    <option value="">Select option</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="LONG_TERM_ILLNESS">Long Term Illness</label>
+                                <select id="LONG_TERM_ILLNESS" name="LONG_TERM_ILLNESS" required>
+                                    <option value="">Select option</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="ENERGY_LEVEL">Energy Level</label>
+                                <input type="number" step="0.01" id="ENERGY_LEVEL" name="ENERGY_LEVEL" placeholder="Enter value (e.g., 60)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="IMMUNE_WEAKNESS">Immune Weakness / Allergies</label>
+                                <select id="IMMUNE_WEAKNESS" name="IMMUNE_WEAKNESS" required>
+                                    <option value="">Select option</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="BREATHING_ISSUE">Breathing Issue</label>
+                                <select id="BREATHING_ISSUE" name="BREATHING_ISSUE" required>
+                                    <option value="">Select option</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="ALCOHOL_CONSUMPTION">Alcohol Consumption</label>
+                                <select id="ALCOHOL_CONSUMPTION" name="ALCOHOL_CONSUMPTION" required>
+                                    <option value="">Select option</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="THROAT_DISCOMFORT">Throat Discomfort</label>
+                                <select id="THROAT_DISCOMFORT" name="THROAT_DISCOMFORT" required>
+                                    <option value="">Select option</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="OXYGEN_SATURATION">Oxygen Saturation</label>
+                                <input type="number" step="0.01" id="OXYGEN_SATURATION" name="OXYGEN_SATURATION" placeholder="Enter value (e.g., 96)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="CHEST_TIGHTNESS">Chest Tightness</label>
+                                <select id="CHEST_TIGHTNESS" name="CHEST_TIGHTNESS" required>
+                                    <option value="">Select option</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="FAMILY_HISTORY">Family History</label>
+                                <select id="FAMILY_HISTORY" name="FAMILY_HISTORY" required>
+                                    <option value="">Select option</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="SMOKING_FAMILY_HISTORY">Smoking Family History</label>
+                                <select id="SMOKING_FAMILY_HISTORY" name="SMOKING_FAMILY_HISTORY" required>
+                                    <option value="">Select option</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="STRESS_IMMUNE">Stress affecting Immune</label>
+                                <select id="STRESS_IMMUNE" name="STRESS_IMMUNE" required>
+                                    <option value="">Select option</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="PULMONARY_DISEASE">Pulmonary Disease</label>
+                                <select id="PULMONARY_DISEASE" name="PULMONARY_DISEASE" required>
+                                    <option value="">Select option</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <span class="btn-text">Predict Now</span>
+                            <span class="loader"></span>
+                        </button>
+                    </form>
+
+                    <div class="result-section" id="lungResult">
+                        <div class="result-card">
+                            <div class="result-status" id="resultStatus">Negative</div>
+                            <div class="result-percentage">
+                                <div class="percentage-bar">
+                                    <div class="percentage-fill" id="percentageFill"></div>
+                                </div>
+                                <div class="percentage-text" id="percentageText">0%</div>
+                            </div>
+                            <p class="result-message" id="resultMessage">No signs of lung cancer detected.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

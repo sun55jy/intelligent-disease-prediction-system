@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidney Disease Prediction - IntelliCure AI</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="logo-icon">⚕</span>
+                <h2>N.B.K.R.IST</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item">
+                    <span>Home</span>
+                </a>
+                <a href="dashboard.html" class="nav-item">
+                    <span>Dashboard</span>
+                </a>
+                <div class="nav-section">
+                    <span class="nav-label">Diseases</span>
+                    <a href="liver.html" class="nav-item">
+                        <span>Liver Disease Prediction</span>
+                    </a>
+                    <a href="kidney.html" class="nav-item active">
+                        <span>Kidney Disease Prediction</span>
+                    </a>
+                    <a href="lung.html" class="nav-item">
+                        <span>Lung Cancer Prediction</span>
+                    </a>
+                    <a href="parkinsons.html" class="nav-item">
+                        <span>Parkinson's Prediction</span>
+                    </a>
+                </div>
+                <a href="history.html" class="nav-item">
+                    <span>History</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <p>© 2026 N.B.K.R.IST</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div class="header-left">
+                    <h1>Kidney Disease Prediction</h1>
+                </div>
+                <div class="header-right">
+                    <span class="user-info">Guest User</span>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <div class="content-main">
+                    <p class="page-description">Enter the required medical parameters to predict kidney disease risk.</p>
+
+                    <form class="prediction-form" id="kidneyForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="age">Age</label>
+                                <input type="number" id="age" name="age" placeholder="Enter age (e.g., 45)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bp">Blood Pressure</label>
+                                <input type="number" id="bp" name="bp" placeholder="Enter BP (e.g., 80)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="sg">Specific Gravity</label>
+                                <input type="number" step="0.01" id="sg" name="sg" placeholder="Enter value (e.g., 1.02)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="al">Albumin</label>
+                                <input type="number" id="al" name="al" placeholder="Enter value (e.g., 1)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="su">Sugar</label>
+                                <input type="number" id="su" name="su" placeholder="Enter value (e.g., 0)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rbc">Red Blood Cells</label>
+                                <select id="rbc" name="rbc" required>
+                                    <option value="">Select status</option>
+                                    <option value="0">Normal</option>
+                                    <option value="1">Abnormal</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="pc">Pus Cells</label>
+                                <select id="pc" name="pc" required>
+                                    <option value="">Select status</option>
+                                    <option value="0">Normal</option>
+                                    <option value="1">Abnormal</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="pcc">Pus Cell Clumps</label>
+                                <select id="pcc" name="pcc" required>
+                                    <option value="">Select status</option>
+                                    <option value="0">Not Present</option>
+                                    <option value="1">Present</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="ba">Bacteria</label>
+                                <select id="ba" name="ba" required>
+                                    <option value="">Select status</option>
+                                    <option value="0">Not Present</option>
+                                    <option value="1">Present</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="bgr">Blood Glucose Random</label>
+                                <input type="number" id="bgr" name="bgr" placeholder="Enter value (e.g., 140)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bu">Blood Urea</label>
+                                <input type="number" id="bu" name="bu" placeholder="Enter value (e.g., 20)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="sc">Serum Creatinine</label>
+                                <input type="number" step="0.1" id="sc" name="sc" placeholder="Enter value (e.g., 1.2)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="sod">Sodium</label>
+                                <input type="number" id="sod" name="sod" placeholder="Enter value (e.g., 135)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pot">Potassium</label>
+                                <input type="number" step="0.1" id="pot" name="pot" placeholder="Enter value (e.g., 4.5)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="hemo">Hemoglobin</label>
+                                <input type="number" step="0.1" id="hemo" name="hemo" placeholder="Enter value (e.g., 12)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pcv">Packed Cell Volume</label>
+                                <input type="number" id="pcv" name="pcv" placeholder="Enter value (e.g., 40)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="wc">White Blood Cell</label>
+                                <input type="number" id="wc" name="wc" placeholder="Enter value (e.g., 8000)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rc">Red Blood Cell Count</label>
+                                <input type="number" step="0.1" id="rc" name="rc" placeholder="Enter value (e.g., 5)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="htn">Hypertension</label>
+                                <select id="htn" name="htn" required>
+                                    <option value="">Select option</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="dm">Diabetes Mellitus</label>
+                                <select id="dm" name="dm" required>
+                                    <option value="">Select option</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cad">Coronary Artery Disease</label>
+                                <select id="cad" name="cad" required>
+                                    <option value="">Select option</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="appet">Appetite</label>
+                                <select id="appet" name="appet" required>
+                                    <option value="">Select option</option>
+                                    <option value="0">Good</option>
+                                    <option value="1">Poor</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="pe">Pedal Edema</label>
+                                <select id="pe" name="pe" required>
+                                    <option value="">Select option</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="ane">Anemia</label>
+                                <select id="ane" name="ane" required>
+                                    <option value="">Select option</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <span class="btn-text">Predict Now</span>
+                            <span class="loader"></span>
+                        </button>
+                    </form>
+
+                    <div class="result-section" id="kidneyResult">
+                        <div class="result-card">
+                            <div class="result-status" id="resultStatus">Negative</div>
+                            <div class="result-percentage">
+                                <div class="percentage-bar">
+                                    <div class="percentage-fill" id="percentageFill"></div>
+                                </div>
+                                <div class="percentage-text" id="percentageText">0%</div>
+                            </div>
+                            <p class="result-message" id="resultMessage">No signs of kidney disease detected.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

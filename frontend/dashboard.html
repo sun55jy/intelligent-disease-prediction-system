@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - N.B.K.R.IST</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="logo-icon">⚕</span>
+                <h2>N.B.K.R.IST</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item">
+                    <span>Home</span>
+                </a>
+                <a href="dashboard.html" class="nav-item active">
+                    <span>Dashboard</span>
+                </a>
+                <div class="nav-section">
+                    <span class="nav-label">Diseases</span>
+                    <a href="liver.html" class="nav-item">
+                        <span>Liver Disease Prediction</span>
+                    </a>
+                    <a href="kidney.html" class="nav-item">
+                        <span>Kidney Disease Prediction</span>
+                    </a>
+                    <a href="lung.html" class="nav-item">
+                        <span>Lung Cancer Prediction</span>
+                    </a>
+                    <a href="parkinsons.html" class="nav-item">
+                        <span>Parkinson's Prediction</span>
+                    </a>
+                </div>
+                <a href="history.html" class="nav-item">
+                    <span>History</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <p>© 2026 N.B.K.R.IST</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div class="header-left">
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="header-right">
+                    <span class="user-info">Guest User</span>
+                </div>
+            </header>
+
+            <div class="content">
+                <div class="dashboard-stats">
+                    <div class="dashboard-stat-card">
+                        <div class="stat-icon liver">♨</div>
+                        <div class="stat-info">
+                            <h3 id="liverCount">0</h3>
+                            <p>Liver Predictions</p>
+                        </div>
+                    </div>
+                    <div class="dashboard-stat-card">
+                        <div class="stat-icon kidney">⚆</div>
+                        <div class="stat-info">
+                            <h3 id="kidneyCount">0</h3>
+                            <p>Kidney Predictions</p>
+                        </div>
+                    </div>
+                    <div class="dashboard-stat-card">
+                        <div class="stat-icon lung">≕</div>
+                        <div class="stat-info">
+                            <h3 id="lungCount">0</h3>
+                            <p>Lung Predictions</p>
+                        </div>
+                    </div>
+                    <div class="dashboard-stat-card">
+                        <div class="stat-icon parkinsons">⚉</div>
+                        <div class="stat-info">
+                            <h3 id="parkinsonsCount">0</h3>
+                            <p>Parkinson's Predictions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-predictions">
+                    <h2 class="section-title">Recent Predictions</h2>
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Disease</th>
+                                <th>Result</th>
+                                <th>Risk Level</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recentTable">
+                            <tr>
+                                <td colspan="4" style="text-align: center; color: var(--gray);">No predictions yet. Start predictions from disease pages.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

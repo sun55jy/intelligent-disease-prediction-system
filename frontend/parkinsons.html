@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkinson's Prediction - IntelliCure AI</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="logo-icon">⚕</span>
+                <h2>N.B.K.R.IST</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item">
+                    <span>Home</span>
+                </a>
+                <a href="dashboard.html" class="nav-item">
+                    <span>Dashboard</span>
+                </a>
+                <div class="nav-section">
+                    <span class="nav-label">Diseases</span>
+                    <a href="liver.html" class="nav-item">
+                        <span>Liver Disease Prediction</span>
+                    </a>
+                    <a href="kidney.html" class="nav-item">
+                        <span>Kidney Disease Prediction</span>
+                    </a>
+                    <a href="lung.html" class="nav-item">
+                        <span>Lung Cancer Prediction</span>
+                    </a>
+                    <a href="parkinsons.html" class="nav-item active">
+                        <span>Parkinson's Prediction</span>
+                    </a>
+                </div>
+                <a href="history.html" class="nav-item">
+                    <span>History</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <p>© 2026 N.B.K.R.IST</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div class="header-left">
+                    <h1>Parkinson's Prediction</h1>
+                </div>
+                <div class="header-right">
+                    <span class="user-info">Guest User</span>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <div class="content-main">
+                    <p class="page-description">Enter the required voice parameters to predict Parkinson's disease risk.</p>
+
+                    <form class="prediction-form" id="parkinsonsForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="MDVP:Fo(Hz)">MDVP:Fo(Hz) - Average Vocal Fundamental Frequency</label>
+                                <input type="number" step="0.01" id="MDVP:Fo(Hz)" name="MDVP:Fo(Hz)" placeholder="Enter value (e.g., 120)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="MDVP:Fhi(Hz)">MDVP:Fhi(Hz) - Maximum Vocal Fundamental Frequency</label>
+                                <input type="number" step="0.01" id="MDVP:Fhi(Hz)" name="MDVP:Fhi(Hz)" placeholder="Enter value (e.g., 180)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="MDVP:Flo(Hz)">MDVP:Flo(Hz) - Minimum Vocal Fundamental Frequency</label>
+                                <input type="number" step="0.01" id="MDVP:Flo(Hz)" name="MDVP:Flo(Hz)" placeholder="Enter value (e.g., 90)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="MDVP:Jitter(%)">MDVP:Jitter(%) - Jitter Percentage</label>
+                                <input type="number" step="0.001" id="MDVP:Jitter(%)" name="MDVP:Jitter(%)" placeholder="Enter value (e.g., 0.005)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="MDVP:Jitter(Abs)">MDVP:Jitter(Abs) - Absolute Jitter</label>
+                                <input type="number" step="0.0001" id="MDVP:Jitter(Abs)" name="MDVP:Jitter(Abs)" placeholder="Enter value (e.g., 0.00003)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="MDVP:RAP">MDVP:RAP - Relative Amplitude Perturbation</label>
+                                <input type="number" step="0.001" id="MDVP:RAP" name="MDVP:RAP" placeholder="Enter value (e.g., 0.003)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="MDVP:PPQ">MDVP:PPQ - Pitch Period Perturbation Quotient</label>
+                                <input type="number" step="0.001" id="MDVP:PPQ" name="MDVP:PPQ" placeholder="Enter value (e.g., 0.004)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Jitter:DDP">Jitter:DDP - Jitter DDP</label>
+                                <input type="number" step="0.001" id="Jitter:DDP" name="Jitter:DDP" placeholder="Enter value (e.g., 0.009)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="MDVP:Shimmer">MDVP:Shimmer - Shimmer</label>
+                                <input type="number" step="0.001" id="MDVP:Shimmer" name="MDVP:Shimmer" placeholder="Enter value (e.g., 0.02)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="MDVP:Shimmer(dB)">MDVP:Shimmer(dB) - Shimmer in dB</label>
+                                <input type="number" step="0.01" id="MDVP:Shimmer(dB)" name="MDVP:Shimmer(dB)" placeholder="Enter value (e.g., 0.25)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Shimmer:APQ3">Shimmer:APQ3</label>
+                                <input type="number" step="0.001" id="Shimmer:APQ3" name="Shimmer:APQ3" placeholder="Enter value (e.g., 0.01)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Shimmer:APQ5">Shimmer:APQ5</label>
+                                <input type="number" step="0.001" id="Shimmer:APQ5" name="Shimmer:APQ5" placeholder="Enter value (e.g., 0.015)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="MDVP:APQ">MDVP:APQ - Amplitude Perturbation Quotient</label>
+                                <input type="number" step="0.001" id="MDVP:APQ" name="MDVP:APQ" placeholder="Enter value (e.g., 0.02)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Shimmer:DDA">Shimmer:DDA - Shimmer DDA</label>
+                                <input type="number" step="0.001" id="Shimmer:DDA" name="Shimmer:DDA" placeholder="Enter value (e.g., 0.03)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="NHR">NHR - Noise to Harmonics Ratio</label>
+                                <input type="number" step="0.001" id="NHR" name="NHR" placeholder="Enter value (e.g., 0.02)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="HNR">HNR - Harmonics to Noise Ratio</label>
+                                <input type="number" step="0.01" id="HNR" name="HNR" placeholder="Enter value (e.g., 25)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="RPDE">RPDE - Recurrence Period Density Entropy</label>
+                                <input type="number" step="0.0001" id="RPDE" name="RPDE" placeholder="Enter value (e.g., 0.5)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="DFA">DFA - Detrended Fluctuation Analysis</label>
+                                <input type="number" step="0.001" id="DFA" name="DFA" placeholder="Enter value (e.g., 0.7)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="spread1">spread1</label>
+                                <input type="number" step="0.001" id="spread1" name="spread1" placeholder="Enter value (e.g., -5)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="spread2">spread2</label>
+                                <input type="number" step="0.01" id="spread2" name="spread2" placeholder="Enter value (e.g., 0.25)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="D2">D2 - Correlation Dimension</label>
+                                <input type="number" step="0.01" id="D2" name="D2" placeholder="Enter value (e.g., 2.5)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="PPE">PPE - Pitch Period Entropy</label>
+                                <input type="number" step="0.001" id="PPE" name="PPE" placeholder="Enter value (e.g., 0.2)" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <span class="btn-text">Predict Now</span>
+                            <span class="loader"></span>
+                        </button>
+                    </form>
+
+                    <div class="result-section" id="parkinsonsResult">
+                        <div class="result-card">
+                            <div class="result-status" id="resultStatus">Negative</div>
+                            <div class="result-percentage">
+                                <div class="percentage-bar">
+                                    <div class="percentage-fill" id="percentageFill"></div>
+                                </div>
+                                <div class="percentage-text" id="percentageText">0%</div>
+                            </div>
+                            <p class="result-message" id="resultMessage">No signs of Parkinson's disease detected.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

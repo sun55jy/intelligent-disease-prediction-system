@@ -1,0 +1,503 @@
+/* ========================================
+   N.B.K.R.IST Project - Form Styles
+   Disease prediction pages
+   ======================================== */
+
+/* ========================================
+   Hero Section (Home Page)
+   ======================================== */
+.hero-section {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 18px;
+    padding: 2rem;
+    margin-bottom: 1.75rem;
+}
+
+.hero-text h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    background: linear-gradient(135deg, var(--white) 0%, var(--primary-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    color: var(--gray);
+    max-width: 550px;
+    line-height: 1.6;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.stat-card {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--primary-light);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+/* ========================================
+   Disease Cards (Home Page)
+   ======================================== */
+.disease-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.disease-card {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 1.75rem;
+    text-decoration: none;
+    color: var(--white);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.disease-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.disease-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 1rem;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.disease-icon svg {
+    width: 26px;
+    height: 26px;
+    color: var(--white);
+}
+
+.disease-icon.liver { background: var(--gradient-liver); }
+.disease-icon.kidney { background: var(--gradient-kidney); }
+.disease-icon.lung { background: var(--gradient-lung); }
+.disease-icon.parkinsons { background: var(--gradient-parkinsons); }
+
+.disease-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.disease-card p {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+/* ========================================
+   Content Wrapper (Prediction Pages)
+   ======================================== */
+.content-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    flex: 1;
+    padding: 0;
+}
+
+.content-main {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+}
+
+.page-description {
+    color: var(--gray);
+    font-size: 1rem;
+    margin-bottom: 1.75rem;
+    line-height: 1.6;
+}
+
+/* ========================================
+   Prediction Form
+   ======================================== */
+.prediction-form {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 18px;
+    padding: 2rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    color: var(--gray);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.form-group input {
+    min-height: 48px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.form-group input::placeholder {
+    color: var(--gray-dark);
+    font-size: 0.85rem;
+}
+
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1.1rem;
+    padding-right: 2.25rem;
+    min-height: 48px;
+}
+
+.form-group select option {
+    background: #1e293b;
+    color: var(--white);
+}
+
+/* ========================================
+   Submit Button
+   ======================================== */
+.btn-submit {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1.25rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+}
+
+.btn-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-submit .loader {
+    display: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--white);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    right: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-submit.loading .loader {
+    display: block;
+}
+
+.btn-submit.loading .btn-text {
+    opacity: 0.7;
+}
+
+/* ========================================
+   Result Section
+   ======================================== */
+.result-section {
+    display: none;
+    margin-top: 1.5rem;
+    padding: 0;
+}
+
+.result-section.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+.result-card {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.75rem;
+    text-align: center;
+}
+
+.result-status {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.result-status.positive {
+    color: #fca5a5;
+}
+
+.result-status.negative {
+    color: #6ee7b7;
+}
+
+.result-percentage {
+    margin-bottom: 1rem;
+}
+
+.percentage-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.percentage-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.percentage-fill.positive {
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+.percentage-fill.negative {
+    background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.percentage-text {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.percentage-text.positive {
+    color: #fca5a5;
+}
+
+.percentage-text.negative {
+    color: #6ee7b7;
+}
+
+.result-message {
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+/* ========================================
+   Info Panel (Right Side)
+   ======================================== */
+.info-panel {
+    width: 320px;
+    flex-shrink: 0;
+    padding-top: 0;
+}
+
+.info-panel .info-section {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 1.25rem;
+    margin-bottom: 0.85rem;
+}
+
+.info-panel h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: var(--primary-light);
+}
+
+.info-panel ul {
+    list-style: none;
+}
+
+.info-panel li {
+    font-size: 0.9rem;
+    color: var(--gray);
+    padding: 0.4rem 0;
+    padding-left: 0.85rem;
+    position: relative;
+}
+
+.info-panel li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--gray-dark);
+}
+
+/* ========================================
+   Dashboard Stats
+   ======================================== */
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-stat-card {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.stat-icon.liver { background: var(--gradient-liver); }
+.stat-icon.kidney { background: var(--gradient-kidney); }
+.stat-icon.lung { background: var(--gradient-lung); }
+.stat-icon.parkinsons { background: var(--gradient-parkinsons); }
+
+.stat-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.stat-info p {
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+/* ========================================
+   History Table
+   ======================================== */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.history-table th,
+.history-table td {
+    padding: 0.9rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.95rem;
+}
+
+.history-table th {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+.history-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    border-radius: 14px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.badge.positive {
+    background: rgba(239, 68, 68, 0.15);
+    color: #fca5a5;
+}
+
+.badge.negative {
+    background: rgba(16, 185, 129, 0.15);
+    color: #6ee7b7;
+}
+
+.history-section {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.section-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.85rem;
+}
+
+.recent-predictions {
+    margin-top: 1.25rem;
+}

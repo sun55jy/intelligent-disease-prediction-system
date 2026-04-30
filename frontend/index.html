@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N.B.K.R.IST - Home</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="logo-icon">⚕</span>
+                <h2>N.B.K.R.IST</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item active">
+                    <span>Home</span>
+                </a>
+                <a href="dashboard.html" class="nav-item">
+                    <span>Dashboard</span>
+                </a>
+                <div class="nav-section">
+                    <span class="nav-label">Diseases</span>
+                    <a href="liver.html" class="nav-item">
+                        <span>Liver Disease Prediction</span>
+                    </a>
+                    <a href="kidney.html" class="nav-item">
+                        <span>Kidney Disease Prediction</span>
+                    </a>
+                    <a href="lung.html" class="nav-item">
+                        <span>Lung Cancer Prediction</span>
+                    </a>
+                    <a href="parkinsons.html" class="nav-item">
+                        <span>Parkinson's Prediction</span>
+                    </a>
+                </div>
+                <a href="history.html" class="nav-item">
+                    <span>History</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <p>© 2026 N.B.K.R.IST</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div class="header-left">
+                    <h1>Welcome to N.B.K.R.IST</h1>
+                </div>
+                <div class="header-right">
+                    <span class="user-info">Guest User</span>
+                </div>
+            </header>
+
+            <div class="content">
+                <div class="hero-section">
+                    <div class="hero-text">
+                        <h1>An Intelligent Agent Multi-Disease Prediction System Using AI</h1>
+                        <p>Advanced machine learning system for early detection of liver, kidney, lung, and Parkinson's diseases.</p>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Diseases</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Accuracy</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Available</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="disease-grid">
+                    <a href="liver.html" class="disease-card">
+                        <div class="disease-icon liver">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                            </svg>
+                        </div>
+                        <h3>Liver Disease</h3>
+                        <p>Predict liver conditions using blood test biomarkers</p>
+                    </a>
+
+                    <a href="kidney.html" class="disease-card">
+                        <div class="disease-icon kidney">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 2v2m0 16v2M2 12h2m16 0h2"/>
+                            </svg>
+                        </div>
+                        <h3>Kidney Disease</h3>
+                        <p>Detect kidney issues through urine analysis</p>
+                    </a>
+
+                    <a href="lung.html" class="disease-card">
+                        <div class="disease-icon lung">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"/>
+                                <path d="M8 14c-2 2-4 2-4 4"/>
+                                <path d="M16 14c2 2 4 2 4 4"/>
+                            </svg>
+                        </div>
+                        <h3>Lung Cancer</h3>
+                        <p>Early lung cancer risk assessment</p>
+                    </a>
+
+                    <a href="parkinsons.html" class="disease-card">
+                        <div class="disease-icon parkinsons">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M8 12h8"/>
+                                <path d="M12 8v8"/>
+                            </svg>
+                        </div>
+                        <h3>Parkinson's</h3>
+                        <p>Monitor Parkinson's disease indicators</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
